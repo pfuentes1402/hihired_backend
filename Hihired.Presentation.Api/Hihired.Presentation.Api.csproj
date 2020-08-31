@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Identity\**" />
+    <Compile Remove="Migrations\**" />
+    <Content Remove="Identity\**" />
+    <Content Remove="Migrations\**" />
+    <EmbeddedResource Remove="Identity\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+    <None Remove="Identity\**" />
+    <None Remove="Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="MediatR" Version="8.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.7" />
+    
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hihired.Application.MainModule\Hihired.Application.MainModule.csproj" />
+    <ProjectReference Include="..\Hihired.Infrastructure.Security\Hihired.Infrastructure.Security.csproj" />
+  </ItemGroup>
+
+
+
+</Project>
